@@ -42,7 +42,7 @@
       "react-app/jest"
     ]
   },
-  "homepage": "https://JoffreyTrebot.github.io/portfolio",
+  "homepage": "https://joffreytrebot.github.io/react-portfolio",
   "browserslist": {
     "production": [
       ">0.2%",
