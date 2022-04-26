@@ -23,7 +23,6 @@ describe('App', () => {
     wrapper = shallow(<App />);
   });
   test('render all components', () => {
-    expect(wrapper.contains(<Header />)).toBe(true);
     expect(wrapper.contains(<Nav />)).toBe(true);
     expect(wrapper.contains(<About />)).toBe(true);
     expect(wrapper.contains(<Experience />)).toBe(true);
