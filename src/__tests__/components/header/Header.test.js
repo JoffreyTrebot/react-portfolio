@@ -15,10 +15,13 @@ describe('Header', () => {
   });
   test('render container with header informations', () => {
     expect(wrapper.find('#header').hasClass('container header__container')).toBe(true);
-    expect(wrapper.find('#header').children().length).toEqual(5);
+    expect(wrapper.find('#header').children().length).toEqual(6);
     expect(wrapper.find('#header').childAt(0).type()).toEqual('h5');
     expect(wrapper.find('#header').childAt(1).type()).toEqual('h1');
     expect(wrapper.find('#header').childAt(2).type()).toEqual('h5');
+    expect(wrapper.find('#header').childAt(3).type()).toEqual(CTA);
+    expect(wrapper.find('#header').childAt(4).type()).toEqual('div');
+    expect(wrapper.find('#header').childAt(5).type()).toEqual('a');
   });
 
   test('render text in first h5 tag', () => {
@@ -44,5 +47,11 @@ describe('Header', () => {
     expect(wrapper.find('#picOfMe').childAt(0).type()).toEqual('img');
     expect(wrapper.find('#picOfMe').childAt(0).props().src).toEqual('me.png');
     expect(wrapper.find('#picOfMe').childAt(0).props().alt).toEqual('me');
+  });
+
+  test('render a scroll down', () => {  
+    expect(wrapper.find('a').props().href).toEqual('#contact');
+    expect(wrapper.find('a').props().className).toEqual('scroll__down');
+    expect(wrapper.find('a').text()).toEqual('Scroll Down');
   });
 });
