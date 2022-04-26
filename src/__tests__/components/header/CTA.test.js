@@ -28,4 +28,12 @@ describe('CTA', () => {
         expect(wrapper.find('a').at(1).props().href).toEqual('#contact');
     });
 
+    test('should have btn className for Download button', () => {
+        expect(wrapper.find('a').at(0).hasClass('btn')).toBe(true);
+    });
+
+    test('should have btn btn-primary className for Lets Talk button', () => {
+        expect(wrapper.find('a').at(1).hasClass('btn btn-primary')).toBe(true);
+    });
+
 });
