@@ -7,7 +7,11 @@ export class Header extends Component {
 
   render() {
     return (
-      <div>Header</div>
+      <div className='container header__container'>
+        <h5>Hello I'm</h5>
+        <h1>Joffrey Trébot</h1>
+        <h5 className='text-light'>Software Engineer</h5>   
+      </div>
     )
   }
 }
